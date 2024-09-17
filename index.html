@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jack Moses</title>
+    
+    <!-- Add this line for the favicon -->
+    <link rel="icon" type="image/jpeg" href="2.jpeg">
+    
+    <!-- If it's a JPEG file, use this line instead -->
+    <!-- <link rel="icon" type="image/jpeg" href="2.jpeg"> -->
+    
     <style>
         body {
             font-family: Georgia, serif;
@@ -170,6 +177,36 @@
         h2 {
             margin-top: 0; /* Ensure the h2 doesn't push content down */
         }
+
+        .fulfillment-policy {
+            margin-top: 2rem;
+        }
+
+        .policy-button {
+            background-color: transparent;
+            color: #5ce1f6;
+            border: 1px solid #5ce1f6;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .policy-button:hover {
+            background-color: #5ce1f6;
+            color: black;
+        }
+
+        .policy-content {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            border: 1px solid #5ce1f6;
+            text-align: left;
+        }
+
+        .policy-content h3, .policy-content h4 {
+            color: #5ce1f6;
+        }
     </style>
 </head>
 <body>
@@ -274,11 +311,50 @@
 
         <footer>
             <p>© 2023 Jack Moses. All rights reserved.</p>
+            
+            <div class="fulfillment-policy">
+                <button onclick="togglePolicy()" class="policy-button">Fulfillment Policy</button>
+                <div id="policyContent" class="policy-content">
+                    <h3>Fulfillment Policy</h3>
+                    <p><strong>Updated: Monday, May 20th, 2024</strong></p>
+                    <p>Welcome to jackmoses.co. By using our website and services (the "Website"), you agree to comply with and be bound by the following terms and conditions (the "Agreement"). Please review them carefully. If you do not agree to these terms, please do not use the Website.</p>
+                    
+                    <h4>1. User Account and Security</h4>
+                    <p>To purchase our digital products, you may need to provide personal information. You are responsible for maintaining the confidentiality of your account and password and for restricting access to your computer. You agree to accept responsibility for all activities that occur under your account or password. If you suspect any unauthorized use of your account, you must notify us immediately at jackmoses@jackmoses.co.</p>
+                    
+                    <h4>2. Changes to Services and Terms</h4>
+                    <p>We reserve the right to update or modify this Agreement, as well as our products, services, and pricing, at any time without prior notice. Your continued use of the Website following any changes indicates your acceptance of the new terms.</p>
+                    
+                    <h4>3. Payments</h4>
+                    <p>All transactions on our Website are conducted in U.S. Dollars. We accept various payment methods and may retain your payment information for future transactions unless you request otherwise by contacting us at jackmoses@jackmoses.co. You confirm that you are authorized to use the payment method provided.</p>
+                    
+                    <h4>4. Online Payment Security</h4>
+                    <p>We ensure secure transactions through our Payment Gateway. All transactions are protected by a 128 Bit SSL Certificate, and your complete credit card information is never visible to us or any external parties. All transaction data is encrypted and stored securely.</p>
+                    
+                    <h4>5. Refund and Cancellation Policy</h4>
+                    <p>Please note that all sales of our digital products—Creator Performance Cohort, Creator Catalyst, Sovereign Creator Cohort, and Internet Freedom Course—are final. We do not offer refunds or accept cancellations for these products under any circumstances.</p>
+                    
+                    <h4>6. General Terms</h4>
+                    <p>This Agreement does not create any partnership, joint venture, or employment relationship between you and Jack Moses Consulting LLC. If any part of this Agreement is found to be invalid, the remaining provisions will continue to be enforceable. Our failure to enforce any provision of this Agreement does not waive our right to enforce it in the future.</p>
+                    
+                    <h4>Contact Us</h4>
+                    <p>If you have any questions about this policy, please contact us at jackmoses@jackmoses.co.</p>
+                </div>
+            </div>
         </footer>
     </div>
     <script>
         function logClick(linkText) {
             console.log('Link clicked: ' + linkText);
+        }
+
+        function togglePolicy() {
+            var content = document.getElementById("policyContent");
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
         }
     </script>
 </body>
