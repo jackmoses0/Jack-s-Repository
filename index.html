@@ -116,21 +116,21 @@
 
         .about-image {
             flex: 0 0 30%;
-            margin-top: 80px; /* Increased to 80px to move the image down significantly */
-            position: relative; /* Added to ensure positioning works */
-            z-index: 1; /* Ensure the image stays on top of other elements */
+            margin-top: 80px;
+            position: relative;
+            z-index: 1;
         }
 
         .profile-pic {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
-            display: block; /* Ensure the image is treated as a block element */
+            display: block;
         }
 
         .about-text {
             flex: 1;
-            margin-top: -40px; /* Pull the text up slightly to reduce the gap */
+            margin-top: 2rem; /* Add spacing between image and text on mobile */
         }
 
         /* Media query for larger screens */
@@ -141,7 +141,7 @@
             }
 
             .about-image {
-                margin-top: 0; /* Reset margin for larger screens */
+                margin-top: 0;
             }
 
             .about-text {
