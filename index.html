@@ -95,7 +95,7 @@
             margin-bottom: 1.5rem; /* Reduced from 2rem to 1.5rem */
         }
         h2 {
-            font-size: 1.5rem; /* This will now be equivalent to about 28.8px */
+            font-size: 2rem; /* Increased from 1.5rem (33% larger) */
             font-weight: 600;
             margin-bottom: 1rem;
             color: #5ce1f6;
@@ -109,20 +109,46 @@
         }
         .about {
             display: flex;
+            flex-direction: column;
             align-items: center;
             gap: 2rem;
         }
+
         .about-image {
             flex: 0 0 30%;
-            margin-top: -160px; /* Increased from -80px to -160px (an additional 80px) */
+            margin-top: 80px; /* Increased to 80px to move the image down significantly */
+            position: relative; /* Added to ensure positioning works */
+            z-index: 1; /* Ensure the image stays on top of other elements */
         }
+
         .profile-pic {
             max-width: 100%;
             height: auto;
+            border-radius: 10px;
+            display: block; /* Ensure the image is treated as a block element */
         }
+
         .about-text {
             flex: 1;
+            margin-top: -40px; /* Pull the text up slightly to reduce the gap */
         }
+
+        /* Media query for larger screens */
+        @media (min-width: 768px) {
+            .about {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+            .about-image {
+                margin-top: 0; /* Reset margin for larger screens */
+            }
+
+            .about-text {
+                margin-top: 0; /* Reset margin for larger screens */
+            }
+        }
+
         .half-size {
             width: 50%; /* Set the width to 50% of its original size */
             height: auto; /* Maintain the aspect ratio */
@@ -218,6 +244,14 @@
         .policy-content h3, .policy-content h4 {
             color: #5ce1f6;
         }
+
+        /* Styles for the hyperlinks in specific sections and 'Who am I?' paragraph text */
+        #writing a,
+        #offerings a,
+        #find-me a,
+        #about p {
+            font-size: 1.125em; /* Increase font size by 12.5% */
+        }
     </style>
 </head>
 <body>
@@ -253,9 +287,9 @@
                 <ul>
                     <li><a href="javascript:void(0);" onclick="logClick('Conscious Creators'); window.open('https://www.skool.com/conscious-creators/about', '_blank');">Conscious Creators</a></li>
                     <li><a href="javascript:void(0);" onclick="logClick('Transcendence'); window.open('https://www.skool.com/transcendence/about', '_blank');">Transcendence</a></li>
-                    <li><a href="javascript:void(0);" onclick="logClick('1-Hour Guidance Call'); window.open('https://tidycal.com/jackmoses808/60-minute-guidance-call', '_blank');">1-Hour Guidance Call</a></li>
+                    <li><a href="javascript:void(0);" onclick="logClick('75-Minute Acceleration Call'); window.open('https://tidycal.com/jackmoses808/60-minute-guidance-call', '_blank');">75-Minute Acceleration Call</a></li>
                     <li><a href="javascript:void(0);" onclick="logClick('Mentorship Application Form'); window.open('https://forms.gle/viAGA4wtxD8c15uG7', '_blank');">Mentorship Application Form</a></li>
-                    <li><a href="javascript:void(0);" onclick="logClick('Austin Retreat Nov 20-24'); window.open('https://forms.gle/ZiC5vvvSjBmnKqNr6', '_blank');">Austin Retreat Nov 20-24</a></li>
+                    <li><a href="javascript:void(0);" onclick="logClick('Austin Men\'s Retreat Nov 21-24'); window.open('https://x.com/jackmoses0/status/1940148288579752001', '_blank');">Austin Men's Retreat Nov 21-24</a></li>
                 </ul>
             </section>
 
